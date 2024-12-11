@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap");
 
 * {
     padding: 0;
@@ -58,7 +57,11 @@ header {
 }
 
 header .overlay {
-    background: linear-gradient(to right, rgba(46, 178, 181, 0.8), rgba(197, 203, 50, 0.8));
+    background: linear-gradient(
+        to right,
+        rgba(46, 178, 181, 0.8),
+        rgba(197, 203, 50, 0.8)
+    );
     min-height: 100vh;
 }
 
@@ -97,6 +100,14 @@ section.services,
 section.gallery {
     padding: 125px 0 0;
     min-height: 650px;
+}
+
+@media screen and (max-width: 767px) {
+    section.services,
+    section.gallery {
+        padding: 50px 0 0;
+        min-height: 650px;
+    }
 }
 
 section.services .section-title h3,
@@ -260,6 +271,12 @@ section.statistics {
 section.statistics .overlay {
     background-color: rgba(22, 172, 202, 0.8);
     padding: 140px 0 108px;
+}
+
+@media screen and (max-width: 767px) {
+    section.statistics .overlay .row > div:not(:last-child) {
+        margin-bottom: 100px;
+    }
 }
 
 section.statistics .overlay .count {
@@ -468,5 +485,16 @@ footer .copyright p {
 @media (max-width: 576px) {
     header .overlay .carousel button {
         visibility: hidden;
+    }
+
+    header .overlay .carousel .carousel-item .carousel-content h2 {
+        font-size: 22px;
+        line-height: 52px;
+        margin-bottom: 50px;
+        color: #fff;
+    }
+
+    header .overlay .carousel .carousel-item .carousel-content a {
+        padding-inline: 30px;
     }
 }
